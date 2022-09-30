@@ -1,7 +1,7 @@
 var axios=require('axios');
 var URL="http://localhost:3000";
 
-axios.get(URL+'/olympic/2016/ranking/42')
+axios.get(URL+'/olympic/2022/ranking/42')
      .then(function(response){
      	console.log(response);
      })
