@@ -6,7 +6,7 @@ axios.get(URL+'/olympic/2022/ranking/42')
       return axios.get(URL+'/iso/country/'+response.data.Country);
      })
      .then(function(response){      
-      return axios.get(URL+'/olympic/2016/medal/'+response.data.iso)
+      return axios.get(URL+'/olympic/2022/medal/'+response.data.iso)
      })
      .then(function(response){
       console.log(response.data)
