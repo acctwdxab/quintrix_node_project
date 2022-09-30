@@ -28,7 +28,7 @@ var app=express();
      return data;
  }
  
- app.get('/olympic/2016/ranking/:rank',function(req,res){
+ app.get('/olympic/2022/ranking/:rank',function(req,res){
       var result=get_rank(req.params.rank);
       if( !isEmpty(result) ){
           res.status(200).send(result);
@@ -50,7 +50,7 @@ var app=express();
  
  var medal_tally={"CN":70,"RU":56,"FR":42,"JP":41,"DE":42};
  
- app.get('/olympic/2016/medal/:country_iso',function(req,res){
+ app.get('/olympic/2022/medal/:country_iso',function(req,res){
        if(medal_tally.hasOwnProperty(req.params.country_iso)){
          res.status(200).send({"medal":medal_tally[req.params.country_iso]});
        }else{
